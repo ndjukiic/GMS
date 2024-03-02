@@ -22,13 +22,31 @@
           transform: translateY(0%);
         }
       }
+      .flex {
+        display: flex;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        column-gap: 10%;
+      }
+      .margin-vertikalno {
+        margin: auto 0;
+      }
+      .margin-horizontalno {
+        margin: 0 auto;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+
       body {
         margin: 0;
         overflow-x: hidden;
       }
       header {
         animation: 1s ease-in 0s slideFromTop;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -165,6 +183,44 @@
           visibility: visible;
           transition: opacity 0.8s, visibility 0.8s;
         }
+      }
+
+      .regulations {
+        width: 80%;
+      }
+      #contact {
+        background-color: #f9f9f9;
+        padding: 50px 0;
+      }
+
+      #contact h1 {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      #contact p {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      #contact ul {
+        list-style-type: none;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      #contact li {
+        font-size: 20px;
+        color: #444;
+        margin-bottom: 10px;
+      }
+
+      #contact li:last-child {
+        margin-bottom: 0;
       }
 
       /* promjena slika za phone view */
@@ -333,20 +389,71 @@
       </div>
     </section>
 
-    <!-- legal inqueries -->
+    <!-- legal inqueries 
+
+     4. Proces kako se firma brine o procesu uvoza radne snage, uključujući i legalne aspekte.
+
+     Implementacija sistema za praćenje zadovoljstva zaposlenih i klijenata kako bi se osigurala visoka kvaliteta usluga i zadovoljstvo svih uključenih strana. Redovno praćenje i prilagođavanje zakonskim regulativama vezanim za uvoz radne snage kako bi se osiguralo poštovanje svih propisa i izbjegli potencijalni pravni problemi.-->
 
     <section>
       <div>
-        <h1 style="text-align: center">
-          What are the regulations that make this happen?
+        <h1 style="text-align: center; font-size: 55px">
+          How do we make it work?
         </h1>
+      </div>
+      <div class="regulations margin-horizontalno">
+        <div class="grid">
+          <!-- očisti flex margin etc. classes -->
+          <div class="flex justify-center">
+            <h1 style="font-size: 124px">1.</h1>
+            <p class="margin-vertikalno">
+              We take care of it this and this and that and this.
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <h1 style="font-size: 124px">1.</h1>
+            <p class="margin-vertikalno">
+              We take care of it this and this and that and this.
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <h1 style="font-size: 124px">1.</h1>
+            <p class="margin-vertikalno">
+              We take care of it this and this and that and this.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- where you can find us -->
-    <section>
+    <!-- <section>
       <div>
-        <h1 style="text-align: center">How can you contact us?</h1>
+        <h1 style="text-align: center; font-size: 55px">
+          How can you contact us?
+        </h1>
+        <p style="text-align: center">
+          Feel free to reach out to us for any inquiries or questions.
+        </p>
+        <ul style="list-style-type: none; padding-left: 0; text-align: center">
+          <li>Email: info@globalmanpower.com</li>
+          <li>Phone: +1 (123) 456-7890</li>
+          <li>Address: 123 Main Street, City, Country</li>
+        </ul>
+      </div>
+    </section> -->
+    <section id="contact">
+      <div>
+        <h1>How can you contact us?</h1>
+        <p>Feel free to reach out to us for any inquiries or questions.</p>
+        <ul>
+          <li>
+            Email:
+            <a href="mailto:info@globalmanpower.com">info@globalmanpower.com</a>
+          </li>
+          <li>Phone: +1 (123) 456-7890</li>
+          <li>Address: 123 Main Street, City, Country</li>
+        </ul>
       </div>
     </section>
   </body>
