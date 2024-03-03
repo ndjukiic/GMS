@@ -34,6 +34,10 @@ html {
   justify-content: center;
 }
 
+ul {
+  padding-left: 0;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -46,10 +50,20 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 0;
   display: flex;
   justify-content: space-between;
   z-index: 99;
+}
+
+header ul {
+  margin: 2rem auto;
+}
+
+.logo ul {
+  margin: 0.5rem auto;
+}
+.logo img {
+  height: 5rem;
 }
 
 .options li {
@@ -70,12 +84,13 @@ header li {
   font-size: 18px;
 }
 
-.socials a {
-  margin-right: 3rem;
+.socials li {
+  margin: auto 0.5rem;
 }
 
 .backdrop {
   display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   z-index: -1;
@@ -90,9 +105,61 @@ header li {
 .backdrop h1 {
   animation: 1.5s ease-out 0s 1 slideInLeft;
   margin: 0 auto;
-  margin-top: 50vh;
+  margin-top: 40vh;
+  font-size: 125px;
+
+  background-image: linear-gradient(180deg, #f12711, #f5af19);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.backdrop h2 {
+  animation: 1.5s ease-out 0s 1 slideInLeft;
+  margin: 0 auto;
   font-size: 75px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  background-image: linear-gradient(90deg, #cf210e, #ce9314);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.card-div {
+  margin: 5rem auto;
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 45px;
+}
+
+.about-card {
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-columns: 70% 30%;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.about-card h2 {
+  text-align: center;
+}
+
+.about-card img {
+  width: 95%;
+  margin: auto;
+  border-radius: 7px;
+  object-fit: cover;
 }
 
 .options a {
@@ -183,6 +250,9 @@ header li {
 .img-card {
   position: relative;
   display: inline-block;
+  img {
+    border-radius: 7px;
+  }
 }
 
 .img-card p {
@@ -206,6 +276,10 @@ header li {
 
 .regulations {
   width: 80%;
+}
+
+#about {
+  scroll-margin-top: 150px;
 }
 
 #backdrop {
