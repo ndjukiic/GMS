@@ -56,32 +56,47 @@ header {
 }
 
 header ul {
-  margin: 2rem auto;
-}
-
-.logo ul {
-  margin: 0.5rem auto;
-}
-.logo img {
-  height: 5rem;
-}
-
-.options li {
-  font-size: 1.5rem;
-}
-
-.logo a {
-  margin-left: 3rem;
-}
-
-header ul {
+  /* margin: 2rem auto; */
   list-style: none;
   display: flex;
 }
 
 header li {
   margin: 0rem 3rem;
-  font-size: 18px;
+  font-size: 24px;
+}
+
+.logo,
+.options,
+.socials {
+  margin: auto 0;
+}
+
+.logo a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  color: #0f2027;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+.logo p {
+  margin: 0;
+  padding: 0;
+}
+.logo ul {
+  margin-top: -0.75rem;
+}
+
+.options a {
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.logo a {
+  margin-left: 3rem;
 }
 
 .socials li {
@@ -96,7 +111,11 @@ header li {
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  background-image: url("https://watermark.lovepik.com/photo/20211209/large/lovepik-white-collar-worker-office-business-office-picture_501702378.jpg");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://watermark.lovepik.com/photo/20211209/large/lovepik-white-collar-worker-office-business-office-picture_501702378.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -108,7 +127,7 @@ header li {
   margin-top: 40vh;
   font-size: 125px;
 
-  background-image: linear-gradient(180deg, #f12711, #f5af19);
+  background-image: linear-gradient(180deg, #2c5364, #0f2027);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -120,7 +139,7 @@ header li {
   margin: 0 auto;
   font-size: 75px;
 
-  background-image: linear-gradient(90deg, #cf210e, #ce9314);
+  background-image: linear-gradient(90deg, #2c5364, #0f2027);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -132,22 +151,45 @@ header li {
   margin: 5rem auto;
 }
 
+.about-card {
+  --c: #2c5364;
+  --b: 5px;
+  --g: 2px;
+
+  padding: calc(var(--g) + var(--b));
+  --_g: #0000 25%, var(--c) 0;
+  background: conic-gradient(
+        from 180deg at top var(--b) right var(--b),
+        var(--_g)
+      )
+      var(--_i, 200%) 0 /200% var(--_i, var(--b)) no-repeat,
+    conic-gradient(at bottom var(--b) left var(--b), var(--_g)) 0
+      var(--_i, 200%) / var(--_i, var(--b)) 200% no-repeat;
+  transition: 0.3s, background-position 0.3s 0.3s;
+  cursor: pointer;
+}
+
+.about-card:hover {
+  --_i: 100%;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+
 .about h1 {
   text-align: center;
   font-size: 45px;
 }
 
 .about-card {
-  border: 1px solid black;
+  border: 1px solid #2c5364;
   border-radius: 7px;
-  padding: 4rem;
+  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 50% 50%;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -169,10 +211,7 @@ header li {
 }
 
 .options a:hover {
-  background-color: rgb(190, 190, 190);
-  border-radius: 5px;
-  padding: 1rem;
-  transform: scale(1.2);
+  background-color: rgba(15, 39, 34, 0.4);
   transition: 0.8s;
 }
 
@@ -213,6 +252,25 @@ header li {
   font-size: 24px;
   text-shadow: 1px 1px 2px rgba(126, 126, 126, 0.5);
   margin: auto 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .offer-grid li {
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 25rem;
+  }
+  @keyframes fade-in {
+    from {
+      scale: 0.8;
+      opacity: 0;
+    }
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
 }
 
 .image-grid {
