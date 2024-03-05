@@ -241,9 +241,13 @@ header li {
   height: 125px;
 }
 
+.offer-grid li p {
+  padding-right: 1rem;
+}
+
 .offer-grid li:hover {
   border-radius: 7px;
-  background-color: rgb(140, 255, 184);
+  background-color: rgba(15, 39, 34, 0.1);
   transform: scale(1.2);
   transition: 0.5s;
 }
@@ -272,64 +276,74 @@ header li {
     }
   }
 }
-
-.image-grid {
-  --gap: 16px;
-  --num-cols: 4;
-  --row-height: 300px;
-
-  width: 80%;
-  margin: 4rem auto;
-  margin-bottom: 10rem;
-  box-sizing: border-box;
-  padding: var(--gap);
-
+.grid-title {
   display: grid;
-  grid-template-columns: repeat(var(--num-cols), 1fr);
-  grid-auto-rows: var(--row-height);
-
-  gap: var(--gap);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10rem;
+  grid-row-gap: 0px;
+  width: 70%;
+  margin: 1rem auto;
+  h1 {
+    text-align: center;
+  }
 }
 
-.image-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image-grid-col-2 {
-  grid-column: span 2;
-}
-
-.image-grid-row-2 {
-  grid-row: span 2;
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10rem;
+  grid-row-gap: 0px;
+  width: 70%;
+  margin: 0rem auto;
 }
 
 .img-card {
   position: relative;
   display: inline-block;
+  overflow: hidden;
   img {
+    width: 100%;
+    height: 100%;
     border-radius: 7px;
   }
 }
 
-.img-card p {
-  display: none;
-  animation: 1s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 10px;
+.img-container {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
-.img-card:hover {
-  p {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.8s, visibility 0.8s;
-  }
+.img-container img {
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-card:hover .img-text {
+  opacity: 1;
+}
+
+.img-card:hover img {
+  opacity: 0.5;
+}
+
+.export-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .regulations {
