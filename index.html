@@ -16,8 +16,8 @@
     <!-- header -->
 
     <div class="backdrop" id="backdrop">
-      <h1>Need someone to fill in the gap?</h1>
-      <h2>We have your perfect candidate.</h2>
+      <h1>Looking for perfect candidates?</h1>
+      <h2>We have them.</h2>
     </div>
     <header id="header">
       <div class="logo">
@@ -31,7 +31,7 @@
       <div class="options">
         <ul>
           <li><a href="#about" id="header-a">About Us</a></li>
-          <li><a href="#offer">Our service</a></li>
+          <li><a href="#description">Our service</a></li>
           <li><a href="#workers">Our workers</a></li>
           <li><a href="#regulations">Regulations</a></li>
           <li><a href="#contact">Contact us</a></li>
@@ -73,15 +73,15 @@
       <div class="card-div">
         <ul>
           <li class="about-card"><div>
-            <h1>Global Manpower Solutions</h1>
+            <h1 style="color:#2c5364">Global Manpower Solutions</h1>
             <h2>
-              At Global Manpower Solutions, we make sure the right people find the right jobs, no matter where they are in the world.<br><br>
-              Global Manpower Solutions is your go-to answer bringing in workers from abroad to fill key roles in industries with the likes of HoReCa (Hotels, Restaurants, Cafés) and construction for Montenegrin companies.<br><br> We also help Montenegrin workers find opportunities in Scandinavian countries like Finland, Sweden, Norway, and Denmark.
+              At Global Manpower Solutions, we make sure the right people find the right jobs, no matter where in the world they're from.<br><br>
+              Global Manpower Solutions is your go-to answer for filling key roles with people from abroad, in industries with the likes of HoReCa (Hotels, Restaurants, Cafés) and construction, for <span style="color:#2c5364;">Montenegrin</span> companies.<br><br> We also help Montenegrin workers find opportunities in Scandinavian countries like Finland, Sweden, Norway, and Denmark.
             </h2>
           
           </div>
             <img
-              src="https://dpv.rs/wp-content/uploads/2023/10/nacuno-tehnoloski-park-beograd.jpg"
+              src="https://images.pexels.com/photos/1595387/pexels-photo-1595387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="checked--v1"
             />
             
@@ -90,25 +90,30 @@
       </div>
     </section>
     <!-- opis usluga -->
-    <section class="offer" id="offer">
+    <section class="description" id="description">
       <div>
         <h1 style="text-align: center; font-size: 45px">What do we offer?</h1>
+        <h2 style="text-align: center; margin-top: 3rem;">We offer workforce with and without experience in the following sectors:</h2>
       </div>
-      <div class="offer-grid">
+      <div class="desc-grid">
         <ul>
-          <li>
+          <li class="pop">
             <img
-              src="https://img.icons8.com/material-outlined/125/checked--v3.png"
+              src="https://img.icons8.com/ios/125/5-star-hotel--v2.png"
               alt="checked--v1"
             />
-            <p>We'll support you through the process of your Visa applications, both in and out of Montenegro.</p>
+            <p style="font-size: 24px; font-weight: bold;">Hotels</p>
           </li>
-          <li>
-            <img
-              src="https://img.icons8.com/material-outlined/125/checked--v3.png"
-              alt="checked--v1"
-            />
-            <p>We'll process all the paperwork for you.</p>
+          <li class="pop"><img src="https://img.icons8.com/ios/125/restaurant.png" alt="restaurant"/>
+            <p style="font-size: 24px; font-weight: bold;">Restaurants</p>
+          </li>
+          <li class="pop">
+            <img src="https://img.icons8.com/ios/125/cafe.png" alt="cafe"/>
+            <p style="font-size: 24px; font-weight: bold;">Cafes</p>
+          </li>
+          <li class="pop">
+            <img src="https://img.icons8.com/ios/125/road-worker.png" alt="road-worker"/>
+            <p style="font-size: 24px; font-weight: bold;">Construction</p>
           </li>
         </ul>
       </div>
@@ -116,7 +121,7 @@
 
     <!-- zemlje -->
 
-    <section id="workers">
+    <section class="workers" id="workers">
       <div>
         <h1 style="text-align: center; font-size: 55px">
           Where are our workers packing their suitcases to?
@@ -195,7 +200,7 @@
           How do we make it work?
         </h1>
       </div>
-      <div class="offer-grid">
+      <div class="regulations-grid">
         <ul>
           <li>
             <img
@@ -281,7 +286,7 @@
           document.documentElement.scrollTop > 300
         ) {
           document.getElementById("header").style.backgroundColor =
-            "rgba(255,255,255, 0.8)";
+            "rgba(236, 233, 230,0.5)";
           document.getElementById("header").style.transition = "0.8s";
         } else {
           document.getElementById("header").style.backgroundColor = "";

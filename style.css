@@ -17,6 +17,7 @@
 }
 html {
   scroll-behavior: smooth;
+  caret-color: transparent;
 }
 .flex {
   display: flex;
@@ -42,6 +43,18 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "DM Sans", sans-serif;
+
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header {
@@ -115,7 +128,7 @@ header li {
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://watermark.lovepik.com/photo/20211209/large/lovepik-white-collar-worker-office-business-office-picture_501702378.jpg");
+    url("https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-size: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -211,8 +224,56 @@ header li {
 }
 
 .options a:hover {
-  background-color: rgba(15, 39, 34, 0.4);
+  background-color: rgba(44, 83, 100, 0.5);
   transition: 0.8s;
+}
+
+.description {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.pop {
+  animation: pop-in 1s;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 50vh;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.desc-grid ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.desc-grid li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.5s;
+  margin: 2.5rem 1rem;
+}
+
+.desc-grid img {
+  width: 125px;
+  height: 125px;
+  margin: 0 auto;
 }
 
 .offer {
@@ -220,62 +281,6 @@ header li {
   margin-bottom: 5rem;
 }
 
-.offer-grid ul {
-  display: grid;
-  grid-template-columns: 30% 30%;
-  column-gap: 10%;
-  list-style: none;
-  justify-content: center;
-}
-
-.offer-grid li {
-  display: flex;
-  transition: 0.5s;
-  margin: 2.5rem 1rem;
-}
-
-.offer-grid li img {
-  margin: auto 0;
-  margin-right: 1rem;
-  width: 125px;
-  height: 125px;
-}
-
-.offer-grid li p {
-  padding-right: 1rem;
-}
-
-.offer-grid li:hover {
-  border-radius: 7px;
-  background-color: rgba(15, 39, 34, 0.1);
-  transform: scale(1.2);
-  transition: 0.5s;
-}
-
-.offer-grid p {
-  font-size: 24px;
-  text-shadow: 1px 1px 2px rgba(126, 126, 126, 0.5);
-  margin: auto 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .offer-grid li {
-    animation: fade-in linear;
-    animation-timeline: view();
-    animation-range-start: cover;
-    animation-range-end: 25rem;
-  }
-  @keyframes fade-in {
-    from {
-      scale: 0.8;
-      opacity: 0;
-    }
-    to {
-      scale: 1;
-      opacity: 1;
-    }
-  }
-}
 .grid-title {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -300,9 +305,11 @@ header li {
 }
 
 .img-card {
-  position: relative;
+  /* position: relative;*/
   display: inline-block;
   overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   img {
     width: 100%;
     height: 100%;
@@ -342,12 +349,69 @@ header li {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
 }
 
 .regulations {
   width: 80%;
+}
+
+.regulations-grid ul {
+  display: grid;
+  grid-template-columns: 30% 30%;
+  column-gap: 10%;
+  list-style: none;
+  justify-content: center;
+}
+
+.regulations-grid li {
+  display: flex;
+  transition: 0.5s;
+  margin: 2.5rem 1rem;
+}
+
+.regulations-grid li img {
+  margin: auto 0;
+  margin-right: 1rem;
+  width: 125px;
+  height: 125px;
+}
+
+.regulations-grid li p {
+  padding-right: 1rem;
+}
+
+.regulations-grid li:hover {
+  border-radius: 7px;
+  background-color: rgba(44, 83, 100, 0.4);
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.regulations-grid p {
+  font-size: 24px;
+  text-shadow: 1px 1px 2px rgba(126, 126, 126, 0.5);
+  margin: auto 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .regulations-grid li {
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 15rem;
+  }
+  @keyframes fade-in {
+    from {
+      scale: 0.8;
+      opacity: 0;
+    }
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
 }
 
 #about {
@@ -358,7 +422,7 @@ header li {
   scroll-margin-top: 150px;
 }
 
-#offer {
+#description {
   scroll-margin-top: 150px;
 }
 
@@ -373,8 +437,6 @@ header li {
 #contact {
   scroll-margin-top: 150px;
 }
-
-
 
 .contact {
   background: #0f2027; /* fallback for old browsers */
