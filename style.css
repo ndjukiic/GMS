@@ -71,7 +71,7 @@ header li {
 .logo a {
   text-decoration: none;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
 
@@ -89,6 +89,8 @@ header li {
 .options a {
   border-radius: 5px;
   padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .logo a {
@@ -120,7 +122,7 @@ header li {
 .backdrop h1 {
   margin: 0 auto;
   margin-top: 40vh;
-  font-size: 125px;
+  font-size: 6rem;
 
   background-image: linear-gradient(180deg, #2c5364, #0f2027);
   background-size: 100%;
@@ -131,7 +133,7 @@ header li {
 }
 .backdrop h2 {
   margin: 0 auto;
-  font-size: 75px;
+  font-size: 3rem;
 
   background-image: linear-gradient(90deg, #2c5364, #0f2027);
   background-size: 100%;
@@ -199,7 +201,7 @@ header li {
 
 .about h1 {
   text-align: center;
-  font-size: 45px;
+  font-size: 2.5rem;
 }
 
 .about-card {
@@ -309,8 +311,6 @@ header li {
 }
 
 .desc-grid img {
-  width: 125px;
-  height: 125px;
   margin: 0 auto;
 }
 
@@ -412,8 +412,6 @@ header li {
 .regulations-grid li img {
   margin: auto 0;
   margin-right: 1rem;
-  width: 125px;
-  height: 125px;
 }
 
 .regulations-grid li p {
@@ -428,7 +426,7 @@ header li {
 }
 
 .regulations-grid p {
-  font-size: 24px;
+  font-size: 1.5rem;
   text-shadow: 1px 1px 2px rgba(126, 126, 126, 0.5);
   margin: auto 0;
 }
@@ -453,27 +451,27 @@ header li {
 }
 
 #about {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 9rem;
 }
 
 #backdrop {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 9rem;
 }
 
 #description {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 9rem;
 }
 
 #workers {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 9rem;
 }
 
 #regulations {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 9rem;
 }
 
 #contact {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 9rem;
 }
 
 .contact {
@@ -493,18 +491,18 @@ header li {
 
   color: #ffffff;
   text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.5);
-  padding: 50px 0;
+  padding: 3rem 0;
 }
 
 .contact h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
   text-align: center;
 }
 
 .contact p {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -515,10 +513,10 @@ header li {
 }
 
 .contact li {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #ffffff;
   text-shadow: 1px 1px 2px rgb(0, 0, 0, 0.5);
-  margin-bottom: 10px;
+  margin-bottom: 0.7rem;
 }
 
 .contact li:last-child {
@@ -547,12 +545,12 @@ header li {
 }
 
 .contact-grid h1 {
-  font-size: 55px;
+  font-size: 3.5rem;
   margin-bottom: 3.5rem;
 }
 
 .contact-grid p {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .map {
@@ -569,7 +567,7 @@ header li {
 }
 
 /* promjena slika za phone view */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 725) {
   .image-grid {
     --num-cols: 2;
     --row-height: 200px;
