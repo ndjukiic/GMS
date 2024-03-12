@@ -22,24 +22,49 @@
     <header id="header">
       <div class="logo">
         <ul>
-          <li>
-            
-      <a href="index.html"><p>Global Manpower</p><p>Solutions</p></a>
+          <li>     
+      <a href="#"><p>Global Manpower</p><p>Solutions</p></a>
           </li>
         </ul>
       </div>
-      <div class="options">
-        <ul>
+      <nav class="options">
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a style="background-color: transparent;" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
           <li><a href="#about" id="header-a">O Nama</a></li>
           <li><a href="#description">Naše usluge</a></li>
           <li><a href="#workers">Naši radnici</a></li>
           <li><a href="#regulations">Regulacije</a></li>
           <li><a href="#contact">Kontakt</a></li>
+          <li>
+          </a>
+          <a style="background-color: transparent;" href="index.html">
+            <img src="https://img.icons8.com/color/48/great-britain-circular.png" alt="great-britain-circular"/>
+        </a>
+            <a style="background-color: transparent;" href="https://www.instagram.com/globalmanpowersolutions" target="_blank">
+              <img
+                src="https://img.icons8.com/fluency/48/instagram-new.png"
+                alt="instagram"
+              />
+            </a>
+            <a style="background-color: transparent;" href="https://www.facebook.com/people/Global-Manpower-Solutions/61556978288324/" target="_blank">
+              <img
+                src="https://img.icons8.com/fluency/48/facebook-new.png"
+                alt="facebook"
+              />
+          </li>
         </ul>
-      </div>
+        
+        <ul>
+          <li class="hideOnMobile"><a href="#about">O Nama</a></li>
+          <li class="hideOnMobile"><a href="#description">Naše usluge</a></li>
+          <li class="hideOnMobile"><a href="#workers">Naši radnici</a></li>
+          <li class="hideOnMobile"><a href="#regulations">Regulacije</a></li>
+          <li class="hideOnMobile"><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
       <div class="socials">
         <ul>
-          <li>
+          <li class="hideOnMobile">
             <a href="https://www.instagram.com/globalmanpowersolutions" target="_blank">
               <img
                 src="https://img.icons8.com/fluency/48/instagram-new.png"
@@ -47,7 +72,7 @@
               />
             </a>
           </li>
-          <li>
+          <li class="hideOnMobile">
             <a href="https://www.facebook.com/people/Global-Manpower-Solutions/61556978288324/" target="_blank">
               <img
                 src="https://img.icons8.com/fluency/48/facebook-new.png"
@@ -55,27 +80,32 @@
               />
             </a>
           </li>
-          <li style="margin: 0 3rem;">
+          <li class="hideOnMobile" style="margin: 0 3rem;">
             <a href="index.html">
-                <img src="https://img.icons8.com/color/48/great-britain-circular.png" alt="great-britain-circular"/>
-            </a>
+              <img src="https://img.icons8.com/color/48/great-britain-circular.png" alt="great-britain-circular"/>
+          </a>
           </li>
         </ul>
       </div>
+      <div>
+        <ul>
+          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="46" viewBox="0 -960 960 960" width="46"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li> 
+      
+        </ul>
+        </div>
     </header>
     <section class="about" id="about">
       <div>
-        <h1>Ko smo mi?</h1>
+        <h1>Who are we?</h1>
       </div>
       <div class="card-div">
         <ul>
           <li class="about-card"><div>
             <h1 style="color:#2c5364">Global Manpower Solutions</h1>
             <h2>
-                U Global Manpower Solutions, mi se brinemo o zapošljavanju pravih osoba za odgovarajuće pozicije, bez obzira na to koji ih je put doveo u Crnu Goru.<br><br>
-                Global Manpower Solutions je vaša prva adresa za popunjavanje ključnih uloga osobama iz inostranstva, u HoReCa (Hoteli, Restorani, Kafići) i građevinskoj industriji, radeći za <span style="color:#2c5364;">crnogorske</span> kompanije.<br><br> Takođe pomažemo crnogorskim radnicima da pronađu prilike u skandinavskim zemljama poput Finske, Švedske, Norveške i Danske.
-            </h2>
-            
+              U Global Manpower Solutions, mi se brinemo o zapošljavanju pravih osoba za odgovarajuće pozicije, bez obzira na to koji ih je put doveo u Crnu Goru.<br><br>
+              Global Manpower Solutions je vaša prva adresa za popunjavanje ključnih uloga osobama iz inostranstva, u HoReCa (Hoteli, Restorani, Kafići) i građevinskoj industriji, radeći za <span style="color:#2c5364;">crnogorske</span> kompanije.<br><br> Takođe pomažemo crnogorskim radnicima da pronađu prilike u skandinavskim zemljama poput Finske, Švedske, Norveške i Danske.
+          </h2>
           
           </div>
             <img
@@ -102,7 +132,8 @@
               src="https://iili.io/JVgVQ8x.png"
               alt="checked--v1"
             />
-            <p style="font-size: 24px; font-weight: bold;">Hoteli</p>
+            <p style="font-size: 1.25rem; font-weight: bold;">Hoteli</p>
+            
           </li>
           <li class="pop">
             <img
@@ -111,7 +142,7 @@
               src="https://iili.io/JVgWH6g.png"
               alt="checked--v1"
             />
-            <p style="font-size: 24px; font-weight: bold;">Restorani</p>
+            <p style="font-size: 1.25rem; font-weight: bold;">Restorani</p>
           </li>
           <li class="pop">
             <img
@@ -120,7 +151,7 @@
               src="https://iili.io/JVgVmZP.png"
               alt="checked--v1"
             />
-            <p style="font-size: 24px; font-weight: bold;">Kafići</p>
+            <p style="font-size: 1.25rem; font-weight: bold;">Kafići</p>
           </li>
           <li class="pop">
             <img
@@ -128,7 +159,7 @@
             height="125"
               src="https://iili.io/JVgW2cJ.png"
               alt="checked--v1"
-            /> <p style="font-size: 24px; font-weight: bold;">Konstrukcija</p>
+            /> <p style="font-size: 1.25rem; font-weight: bold;">Građevina</p>
           </li>
         </ul>
       </div>
@@ -138,73 +169,73 @@
 
     <section class="workers" id="workers">
       <div>
-        <h1 style="text-align: center; font-size: 55px">
+        <h1 style="text-align: center; font-size: 45px" id="w-title">
           Odakle nam dolaze radnici, i gdje šaljemo naše?
         </h1>
       </div>
-      <div class="grid-title">
-        <div>
-          <h1>Strani radnici u Crnoj Gori su iz</h1>
-        </div>
-        <div>
-          <h1>Crnogorski radnici se mogu naći u državama poput</h1>
-        </div>
-      </div>
       <div class="img-grid">
-        <div class="img-card">
-          <div class="img-container">
-            <img
-            src="https://iili.io/JVnaRFs.jpg"
-            alt=""
-          />
-          <div class="img-text">
-            <p style="text-align: center; font-weight: bold; font-size: 32px;text-shadow: rgba(255,255,255,0.5)">Različitih djelova Azije</p>
-          </div>
-          </div>
-        </div>
-        <div class="export-grid">
+        <div class="flex-title">
+          <h1>Strani radnici su u Crnoj Gori došli iz</h1>
           <div class="img-card">
             <div class="img-container">
               <img
-              src="https://iili.io/JVnaKFa.jpg"
+              src="https://iili.io/JVnaRFs.jpg"
               alt=""
             />
             <div class="img-text">
-              <p style="text-align: center; font-weight: bold; font-size: 32px;text-shadow: rgba(255,255,255,0.5)">Finske</p>
-            </div>
-            </div>
-          </div><div class="img-card">
-            <div class="img-container">
-              <img
-              src="https://iili.io/JVnanup.jpg"
-              alt=""
-            />
-            <div class="img-text">
-              <p style="text-align: center; font-weight: bold; font-size: 32px;text-shadow: rgba(255,255,255,0.5)">Švedske</p>
-            </div>
-            </div>
-          </div><div class="img-card">
-            <div class="img-container">
-              <img
-              src="https://iili.io/JVnafcJ.jpg"
-              alt=""
-            />
-            <div class="img-text">
-              <p style="text-align: center; font-weight: bold; font-size: 32px;text-shadow: rgba(255,255,255,0.5)">Norveške</p>
-            </div>
-            </div>
-          </div><div class="img-card">
-            <div class="img-container">
-              <img
-              src="https://iili.io/JVnYyuV.jpg"
-              alt=""
-            />
-            <div class="img-text">
-              <p style="text-align: center; font-weight: bold; font-size: 32px;text-shadow: rgba(255,255,255,0.5)">Danske</p>
+              <p style="text-align: center; font-weight: bold; font-size: 32px;text-shadow: rgba(255,255,255,0.5)">Raznih djelova Azije</p>
             </div>
             </div>
           </div>
-      </div>
+        </div>
+        
+        <div class="flex-title">
+          <h1>Crnogorski radnici se mogu naći u državama poput</h1>
+          <div class="export-grid">
+            <div class="img-card">
+              <div class="img-container">
+                <img
+                src="https://iili.io/JVnaKFa.jpg"
+                alt=""
+              />
+              <div class="img-text">
+                <p style="text-align: center; font-weight: bold; font-size: 32px;text-shadow: rgba(255,255,255,0.5)">Finske</p>
+              </div>
+              </div>
+            </div><div class="img-card">
+              <div class="img-container">
+                <img
+                src="https://iili.io/JVnanup.jpg"
+                alt=""
+              />
+              <div class="img-text">
+                <p style="text-align: center; font-weight: bold; font-size: 32px;text-shadow: rgba(255,255,255,0.5)">Švedske</p>
+              </div>
+              </div>
+            </div><div class="img-card">
+              <div class="img-container">
+                <img
+                src="https://iili.io/JVnafcJ.jpg"
+                alt=""
+              />
+              <div class="img-text">
+                <p style="text-align: center; font-weight: bold; font-size: 32px;text-shadow: rgba(255,255,255,0.5)">Norveške</p>
+              </div>
+              </div>
+            </div><div class="img-card">
+              <div class="img-container">
+                <img
+                src="https://iili.io/JVnYyuV.jpg"
+                alt=""
+              />
+              <div class="img-text">
+                <p style="text-align: center; font-weight: bold; font-size: 32px;text-shadow: rgba(255,255,255,0.5)">Danske</p>
+              </div>
+              </div>
+            </div>
+        </div>
+        </div>
+        
     </section>
 
     <!-- legal inqueries -->
@@ -279,8 +310,8 @@
                 >gmanpowersolutions@gmail.com</a
               >
             </li>
-            <li>Telefon: <span>+38267865047</span></li>
-            <li>Adresa: <span>85 Slobode, Podgorica, Montenegro</span></li>
+            <li>Telefon: <a href="tel:+38267865047">+38267865047</a></li>
+            <li>Adresa: <span>Ulica Slobode 85, Podgorica, Montenegro</span></li>
           </ul>
         </div>
         <div>
@@ -292,6 +323,22 @@
       </div>
       
     <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+        setTimeout(() => {
+        sidebar.style.opacity = '1';
+    }, 10);
+      }
+
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+    sidebar.style.opacity = '0';
+
+    setTimeout(() => {
+        sidebar.style.display = 'none';
+    }, 500);
+      }
       window.onscroll = function () {
         scrollFunction();
       };
