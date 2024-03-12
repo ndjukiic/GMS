@@ -27,18 +27,44 @@
           </li>
         </ul>
       </div>
-      <div class="options">
-        <ul>
+      <nav class="options">
+        <ul class="sidebar">
+          <li onclick=hideSidebar()><a style="background-color: transparent;" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#description">Our service</a></li>
           <li><a href="#workers">Our workers</a></li>
           <li><a href="#regulations">Regulations</a></li>
           <li><a href="#contact">Contact us</a></li>
+          <li>
+          </a>
+          <a style="background-color: transparent;" href="index_sr.html"  >
+            <img src="https://img.icons8.com/color/48/montenegro-circular.png" alt="montenegro-circular"/>
+          </a>
+            <a style="background-color: transparent;" href="https://www.instagram.com/globalmanpowersolutions" target="_blank">
+              <img
+                src="https://img.icons8.com/fluency/48/instagram-new.png"
+                alt="instagram"
+              />
+            </a>
+            <a style="background-color: transparent;" href="https://www.facebook.com/people/Global-Manpower-Solutions/61556978288324/" target="_blank">
+              <img
+                src="https://img.icons8.com/fluency/48/facebook-new.png"
+                alt="facebook"
+              />
+          </li>
         </ul>
-      </div>
+        
+        <ul>
+          <li class="hideOnMobile"><a href="#about">About Us</a></li>
+          <li class="hideOnMobile"><a href="#description">Our service</a></li>
+          <li class="hideOnMobile"><a href="#workers">Our workers</a></li>
+          <li class="hideOnMobile"><a href="#regulations">Regulations</a></li>
+          <li class="hideOnMobile"><a href="#contact">Contact us</a></li>
+        </ul>
+      </nav>
       <div class="socials">
         <ul>
-          <li>
+          <li class="hideOnMobile">
             <a href="https://www.instagram.com/globalmanpowersolutions" target="_blank">
               <img
                 src="https://img.icons8.com/fluency/48/instagram-new.png"
@@ -46,7 +72,7 @@
               />
             </a>
           </li>
-          <li>
+          <li class="hideOnMobile">
             <a href="https://www.facebook.com/people/Global-Manpower-Solutions/61556978288324/" target="_blank">
               <img
                 src="https://img.icons8.com/fluency/48/facebook-new.png"
@@ -54,13 +80,19 @@
               />
             </a>
           </li>
-          <li style="margin: 0 3rem;">
+          <li class="hideOnMobile" style="margin: 0 3rem;">
             <a href="index_sr.html" >
               <img src="https://img.icons8.com/color/48/montenegro-circular.png" alt="montenegro-circular"/>
             </a>
           </li>
         </ul>
       </div>
+      <div>
+        <ul>
+          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 -960 960 960" width="64"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li> 
+      
+        </ul>
+        </div>
     </header>
     <section class="about" id="about">
       <div>
@@ -290,6 +322,15 @@
       </div>
       
     <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+      }
+
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+      }
       window.onscroll = function () {
         scrollFunction();
       };
